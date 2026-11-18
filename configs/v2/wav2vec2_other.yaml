@@ -1,0 +1,17 @@
+# Same as wav2vec2.yaml on the harder test-other split (2,939 utterances).
+modality: speech
+model_name: facebook/wav2vec2-base-960h
+librispeech_config: other
+n_samples: null
+skip_feature_extractor: false
+block_size: 32
+results_dir: results_v2_other
+quant_modes:
+  - fp32
+  - mxfp4
+  - nvfp4
+  - m2xfp
+  - mxfp4_residual_act_only
+  - mxfp4_residual_weight_only
+  - mxfp4_residual
+  - mxfp8_e4m3

@@ -1,0 +1,15 @@
+# Everything EXCEPT torch, which is reused from your existing GPU environment.
+# Install with the torch version pinned as a constraint so pip never replaces it:
+#   pip install -r requirements_v2.txt -c constraints_local.txt
+transformers
+datasets
+accelerate
+timm
+soundfile
+pyyaml
+scipy
+pandas
+packaging
+certifi
+tqdm
+pytest

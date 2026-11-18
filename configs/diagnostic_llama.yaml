@@ -1,0 +1,13 @@
+model_name: "meta-llama/Llama-2-7b-hf"
+seq_len: 1024
+block_size: 32
+calib_chunks: 64
+quant_modes:
+  - fp32
+  - bf16
+  - mxfp4
+  - mxfp8_e5m2
+  - mxfp8_e4m3
+  - mxfp4_residual
+  - mxfp4_residual_weight_only
+  - mxfp4_residual_act_only

@@ -1,0 +1,7 @@
+# Zero-shot (lm-eval, 0-shot) for GPT-2 with the v2 layers. All 8 formats.
+model_name: gpt2
+block_size: 32
+batch_size: auto
+max_batch_size: 32
+tasks: [winogrande, piqa, hellaswag, arc_easy, boolq]
+quant_modes: [bf16, mxfp4, nvfp4, m2xfp, mxfp4_residual_act_only, mxfp4_residual_weight_only, mxfp4_residual, mxfp8_e4m3]

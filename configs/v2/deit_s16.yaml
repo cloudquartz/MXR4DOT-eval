@@ -1,0 +1,18 @@
+# deit_small_patch16_224, ImageNet-1k validation (all 50,000 images). Gated dataset:
+# accept the terms for ILSVRC/imagenet-1k on the Hub and log in.
+# Classifier head left unquantised; everything else (incl. first layer) quantised.
+modality: vision
+model_name: deit_small_patch16_224
+n_images: null          # null = all 50,000
+batch_size: 64
+num_workers: 8
+block_size: 32
+quant_modes:
+  - fp32
+  - mxfp4
+  - nvfp4
+  - m2xfp
+  - mxfp4_residual_act_only
+  - mxfp4_residual_weight_only
+  - mxfp4_residual
+  - mxfp8_e4m3

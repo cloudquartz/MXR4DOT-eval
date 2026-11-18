@@ -1,0 +1,10 @@
+# Zero-shot (lm-eval, 0-shot) for Llama-2-7B with the v2 layers.
+# Only formats whose quantised weights are exact in bf16 fit a 16 GB GPU
+# (13.5 GB model). NVFP4 and residue-on-weights/both need ~2x the weight
+# memory and are left out on this card.
+model_name: meta-llama/Llama-2-7b-hf
+block_size: 32
+batch_size: 4
+max_batch_size: 4
+tasks: [winogrande, piqa, hellaswag, arc_easy, boolq]
+quant_modes: [bf16, mxfp4, m2xfp, mxfp4_residual_act_only, mxfp8_e4m3]

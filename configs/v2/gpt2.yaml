@@ -1,0 +1,16 @@
+# GPT-2 (124M), WikiText-2 test, all 1024-token chunks (GPT-2's context limit).
+modality: language
+model_name: gpt2
+seq_len: 1024
+n_chunks: null          # null = full test set
+exec_mode: full
+block_size: 32
+quant_modes:
+  - bf16
+  - mxfp4
+  - nvfp4
+  - m2xfp
+  - mxfp4_residual_act_only
+  - mxfp4_residual_weight_only
+  - mxfp4_residual
+  - mxfp8_e4m3

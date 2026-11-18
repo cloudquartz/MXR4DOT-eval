@@ -1,0 +1,17 @@
+# wav2vec2-base-960h, LibriSpeech test-clean (all 2,620 utterances), greedy CTC.
+# CTC head (lm_head) left unquantised; feature extractor and pos-conv quantised.
+modality: speech
+model_name: facebook/wav2vec2-base-960h
+librispeech_config: clean
+n_samples: null         # null = whole split
+skip_feature_extractor: false
+block_size: 32
+quant_modes:
+  - fp32
+  - mxfp4
+  - nvfp4
+  - m2xfp
+  - mxfp4_residual_act_only
+  - mxfp4_residual_weight_only
+  - mxfp4_residual
+  - mxfp8_e4m3

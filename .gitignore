@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+.pytest_cache/
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# Evaluation outputs & caches
+results/
+results_mini/
+results_v2/
+results_v2_other/
+*.log
+smoke_*.txt
+test_log.txt
+.cache/
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+constraints_local.txt

@@ -1,0 +1,19 @@
+# meta-llama/Llama-2-7b-hf, WikiText-2 test, all 2048-token chunks.
+# Does not fit a 16 GB GPU whole: exec_mode sequential runs it layer by layer
+# (holds the bf16 checkpoint, 14-16 GB, in system RAM).
+# Gated: accept the licence on the Hub and run `hf auth login` first.
+modality: language
+model_name: meta-llama/Llama-2-7b-hf
+seq_len: 2048
+n_chunks: null
+exec_mode: sequential
+block_size: 32
+quant_modes:
+  - bf16
+  - mxfp4
+  - nvfp4
+  - m2xfp
+  - mxfp4_residual_act_only
+  - mxfp4_residual_weight_only
+  - mxfp4_residual
+  - mxfp8_e4m3
